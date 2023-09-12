@@ -1,4 +1,2 @@
 #!/bin/bash
-c_file="$CFILE"
-output_file="${c_file%.c}.s"
-gcc -S -masm=intel "$c_file" -o "$output_file"
+gcc -S -masm=intel "$c_file" -o 'echo $CFILE | cut -d. -f1'
